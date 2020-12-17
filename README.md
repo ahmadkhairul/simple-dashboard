@@ -1,29 +1,62 @@
-## Pre-Test-Avana
+# simple-dashboard
 
-### Clone Repository
+just a simple dashboard
 
-This app using ReactJs to build. To run this app you can clone this repository first.
+## Demo
+
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Setup](#Setup)
+- [Screenshots](#screenshots)
+- [Built With](#built-with)
+- [Author](#author)
+
+## Getting Started
+
+Before starting to install the project, there're some things that need to be done first.
+
+### Prerequisites
+
+Make sure all of these are properly installed in your system.
+
+| Application  | Download                                                                            |
+| ------------ | ----------------------------------------------------------------------------------- |
+| Git          | [Windows](https://gitforwindows.org/) / [Linux](https://git-scm.com/download/linux) |
+| Node.js      | [Link](https://nodejs.org/en/download/)                                             |
+| React Native | [Link](https://facebook.github.io/react-native/docs/getting-started)                |
+| MySQL        | [Link](https://www.mysql.com/downloads/)                                            |
+
+### Installation
+
+First, clone this repository into your system.
 
 ```
-git clone https://github.com/hasbimsdd27/Pre-Test-Avana
+git clone https://github.com/ahmadkhairul/simple-dashboard.git
 ```
 
-### Run Locally
+Then, install all the packages that described in `package.json`.
 
-If you want to run it locally, just run this step
+```
+npm install
+```
+### Run the server
 
-first, run `npm i` to install requering dependencies. After that, run `npm start` and wait until the process complete and your browser opened. Finally your app is already run.
+```
+npm start
+```
 
-### Deploy
+## Screenshots
 
-This App is deployed on netlify. This is the link https://avana-test-hasbi.netlify.com/
+<img src="screenshots/screenshots.png" />
 
-### Screenshot
+## Built With
 
-<img src="screenshot/Screenshot (13).png" />
+- [React JS](https://reactjs.org/) - Front-end
 
-<img src="screenshot/Screenshot (14).png" />
+## Author
 
-<img src="screenshot/Screenshot (15).png" />
-
-<img src="screenshot/Screenshot (16).png" />
+**Ahmad Khairul Anwar** - [Ahmad Khairul](https://github.com/ahmadkhairul)
