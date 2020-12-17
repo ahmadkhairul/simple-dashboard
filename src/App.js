@@ -7,11 +7,11 @@ import { toTitleCase } from "./utils/helper";
 import Accordion from "./components/Accordion";
 
 const App = props => {
-  const { getSidebar } = props;
+  const { getSidebar, menu } = props;
 
   useEffect(() => {
     getSidebar();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   let setNavbar = null;
   const [sidebar, setSidebar] = useState(true);
@@ -46,7 +46,7 @@ const App = props => {
               </div>
             </div>
             <div className="menuArea">
-              {props.menu.data.map((item, index) =>
+              {menu.data.map((item, index) =>
                 item.isShowed ? (
                   item.isAllowed ? (
                     item.childs ? (
