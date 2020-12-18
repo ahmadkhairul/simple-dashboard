@@ -4,13 +4,12 @@ just a simple dashboard
 
 ## Demo
 
-
 ## Table of Contents
 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-  - [Setup](#Setup)
+  - [Run the server](#run-the-server)
 - [Screenshots](#screenshots)
 - [Built With](#built-with)
 - [Author](#author)
@@ -43,6 +42,7 @@ Then, install all the packages that described in `package.json`.
 ```
 npm install
 ```
+
 ### Run the server
 
 ```
@@ -51,11 +51,11 @@ npm start
 
 ## Screenshots
 
-<img src="screenshots/screenshots.png" />
+<img src="screenshots/screenshot.jpg" />
 
 ## Built With
 
-- [React JS](https://reactjs.org/) - Front-end
+- [React JS](https://reactjs.org/)
 
 ## Author
 
