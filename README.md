@@ -4,6 +4,8 @@ just a simple dashboard
 
 ## Demo
 
+https://simple-dashboard-demo.netlify.app/
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
