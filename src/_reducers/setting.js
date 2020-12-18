@@ -1,7 +1,7 @@
-import { GET_SIDEBAR } from "../config/constants";
+import { GET_SIDEBAR, HANDLE_TOGGLE } from "../config/constants";
 
 const initialState = {
-  data: []
+  data: [],
 };
 
 const SidebarMenu = (state = initialState, action) => {
@@ -9,7 +9,12 @@ const SidebarMenu = (state = initialState, action) => {
     case GET_SIDEBAR:
       return {
         ...state,
-        data: action.payload
+        data: action.payload,
+      };
+    case HANDLE_TOGGLE:
+      return {
+        ...state,
+        data: action.payload,
       };
     default:
       return state;

@@ -37,7 +37,7 @@
   transition: 0.5s;
   padding: 1rem;
   text-align: center;
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
 }
 
 .blocks:nth-child(1) {
@@ -46,7 +46,7 @@
 }
 
 .blocks:nth-child(2) {
-  grid-column: 6/ span 2;
+  grid-column: 6 / span 2;
   grid-row: 1;
 }
 
@@ -56,53 +56,23 @@
 }
 
 .blocks:nth-child(4) {
-  grid-column: 1/ span 2;
+  grid-column: 1 / span 2;
   grid-row: 2;
 }
 
 .blocks:nth-child(5) {
-  grid-column: 5/ span 2;
+  grid-column: 5 / span 2;
   grid-row: 2;
 }
 
 .blocks:nth-child(6) {
-  grid-column: 7/ span 2;
+  grid-column: 7 / span 2;
   grid-row: 2;
 }
 
 .blocks:nth-child(7) {
-  grid-column: 1 / span 4;
-  grid-row: 4 / span 4;
-}
-
-.blocks:nth-child(8) {
-  grid-column: 5 / span 2;
-  grid-row: 4 / span 2;
-}
-
-.blocks:nth-child(9) {
-  grid-column: 7/ span 2;
-  grid-row: 4 / span 2;
-}
-
-.blocks:nth-child(10) {
-  grid-column: 5 / span 2;
-  grid-row: 6 /span 2;
-}
-
-.blocks:nth-child(11) {
-  grid-column: 7/ span 2;
-  grid-row: 6 /span 2;
-}
-
-.blocks:nth-child(12) {
-  grid-column: 1 / span 4;
-  grid-row: 8 / span 4;
-}
-
-.blocks:nth-child(13) {
-  grid-column: 5 / span 4;
-  grid-row: 8 / span 4;
+  grid-column: 1 / span 8;
+  grid-row: 4 / span 8;
 }
 
 /* sidebar */
@@ -301,13 +271,76 @@
 
 .showHideMenu {
   position: absolute;
+  padding: 0.2em 0.5em;
+  font-weight: bold;
   left: 10px;
   top: 10px;
   z-index: 1;
+  display: inline-block;
+  cursor: pointer;
+  color: #222;
+  font-family: Arial;
+  text-decoration: none;
+  outline: none;
+  background-color: rgb(253, 184, 20);
+  border-radius: 6px;
+  border: 1px solid rgb(253, 184, 20);
+}
+
+/* tableToggle */
+
+.tableToggle {
+  color: #222;
+}
+
+.buttonToggleOn {
+  margin: 0.5em;
+  background-color: rgb(253, 184, 20);
+  border-radius: 6px;
+  border: 1px solid rgb(253, 184, 20);
+  display: inline-block;
+  cursor: pointer;
+  color: #222;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 6px 24px;
+  text-decoration: none;
+  outline: none;
+}
+
+.buttonToggleOff {
+  margin: 0.5em;
+  background-color: rgb(182, 179, 172);
+  border-radius: 6px;
+  border: 1px solid rgb(126, 125, 122);
+  display: inline-block;
+  cursor: pointer;
+  color: #222;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 6px 24px;
+  text-decoration: none;
+  outline: none;
+}
+
+.tableToggle,
+tr,
+td,
+th {
+  border: 1px solid black;
+  padding: 0.2em;
+}
+
+th {
+  padding: 0.5em;
+}
+
+tr > td:nth-child(2) {
+  text-align: left;
+  padding-left: 1em;
 }
 
 @media (max-width: 991px) {
-
   .logoImage {
     width: 100%;
     height: 20px;

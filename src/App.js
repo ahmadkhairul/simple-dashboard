@@ -5,8 +5,9 @@ import "font-awesome/css/font-awesome.min.css";
 import { getSidebar } from "./_actions/setting";
 import { toTitleCase } from "./utils/helper";
 import Accordion from "./components/Accordion";
+import Toggle from "./components/Toggle";
 
-const App = props => {
+const App = (props) => {
   const { getSidebar, menu } = props;
 
   useEffect(() => {
@@ -17,33 +18,27 @@ const App = props => {
   const [sidebar, setSidebar] = useState(true);
 
   if (sidebar) {
-    setNavbar = { display: 'flex' };
+    setNavbar = { display: "flex" };
   } else {
-    setNavbar = { display: 'none' };
+    setNavbar = { display: "none" };
   }
 
   return (
     <>
-      <button
-        className="showHideMenu"
-        onClick={() => setSidebar(!sidebar)}
-      >
-        {sidebar ? 'X' : '+'}
+      <button className="showHideMenu" onClick={() => setSidebar(!sidebar)}>
+        {sidebar ? "X" : "+"}
       </button>
       <div className="mainContainer" style={{ transition: "0.5s" }}>
         <div className="sideBar" style={setNavbar}>
           <div className="sideBarContent">
             <div className="imageArea">
-
               <div className="imageContainer">
                 <img className="logoImage" src="/avana-logo.png" alt="Logo" />
               </div>
               <div className="imageContainer">
                 <img className="avatar" src="/profile.png" alt="Logo" />
               </div>
-              <div className="profileName">
-                Afriza Bramantyo
-              </div>
+              <div className="profileName">Avriza Bramantyo</div>
             </div>
             <div className="menuArea">
               {menu.data.map((item, index) =>
@@ -53,26 +48,33 @@ const App = props => {
                       <Accordion title={toTitleCase(item.id)} key={index}>
                         {item.childs
                           ? item.childs.map((item, index) =>
-                            item.isShowed ? (
-                              item.isAllowed ? (
-                                <div className="accordion-text" key={index}>
-                                  {toTitleCase(item.id)}
-                                </div>
-                              ) : (
-                                  <div className="accordion-text disabled" key={index}                                  >
+                              item.isShowed ? (
+                                item.isAllowed ? (
+                                  <div className="accordion-text" key={index}>
+                                    {toTitleCase(item.id)}
+                                  </div>
+                                ) : (
+                                  <div
+                                    className="accordion-text disabled"
+                                    key={index}
+                                  >
                                     {toTitleCase(item.id)}
                                   </div>
                                 )
-                            ) : null
-                          )
+                              ) : null
+                            )
                           : null}
                       </Accordion>
                     ) : (
-                        <div className="noChild" key={index}>{toTitleCase(item.id)}</div>
-                      )
-                  ) : (
-                      <div className="disabled" key={index}>{toTitleCase(item.id)}</div>
+                      <div className="noChild" key={index}>
+                        {toTitleCase(item.id)}
+                      </div>
                     )
+                  ) : (
+                    <div className="disabled" key={index}>
+                      {toTitleCase(item.id)}
+                    </div>
+                  )
                 ) : null
               )}
             </div>
@@ -87,13 +89,9 @@ const App = props => {
               <div className="blocks" />
               <div className="blocks" />
               <div className="blocks" />
-              <div className="blocks" />
-              <div className="blocks" />
-              <div className="blocks" />
-              <div className="blocks" />
-              <div className="blocks" />
-              <div className="blocks" />
-              <div className="blocks" />
+              <div className="blocks">
+                <Toggle />
+              </div>
             </div>
           </div>
         </div>
@@ -102,15 +100,15 @@ const App = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    menu: state.menu
+    menu: state.menu,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    getSidebar: () => dispatch(getSidebar())
+    getSidebar: () => dispatch(getSidebar()),
   };
 };
 

@@ -13,7 +13,9 @@
     "id": "agent",
     "isShowed": true,
     "isAllowed": false,
-    "childs": [{ "id": "my_purchase", "isShowed": true, "isAllowed": true }]
+    "childs": [
+      { "id": "my_purchase", "isShowed": true, "isAllowed": true }
+    ]
   },
   { "id": "orders", "isShowed": true, "isAllowed": true },
   {
